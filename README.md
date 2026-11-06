@@ -20,16 +20,13 @@ From this folder:
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000. In a local preview, placeholders appear with a dashed gold outline.
-On the live site they are hidden automatically until you fill them in.
+Then open http://localhost:8000.
 
-## Fill in the placeholders
+## Hide something that isn't ready yet
 
-1. **Profile links** (Contact section, near the end of `index.html`): Google Scholar and ORCID.
-   Paste your URL into `href="#"` and remove the word `todo` from that line's `class`.
-   To drop a link entirely, delete its line.
-2. **Under-review paper** (Publications → U1): add the co-authors and the journal, then delete the
-   `<span class="todo-note">…</span>`.
+Add `todo` to an element's `class` (for example `class="link-pill todo"`), or wrap a short note in
+`<span class="todo-note">…</span>`. In a local preview it appears with a dashed gold outline;
+on the live site it stays hidden until you remove the class.
 
 ## Common updates
 
