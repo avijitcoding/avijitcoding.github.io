@@ -506,7 +506,8 @@ dl, dd { margin: 0; }
 .lead .row-points { grid-column: 1 / -1; display: grid; gap: 7px; font-size: 0.97rem; }
 
 /* ---------- Gallery ---------- */
-.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.gallery .shot { flex: 0 1 calc((100% - 36px) / 3); }
 .shot { position: relative; margin: 0; overflow: hidden; border-radius: 18px; background: var(--deep-2); }
 .shot img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.5s ease; }
 .shot:hover img { transform: scale(1.03); }
@@ -583,7 +584,7 @@ html.dev .dev-banner {
   }
   .about-grid, .honors-grid, .beyond { grid-template-columns: minmax(0, 1fr); }
   .lead-grid { grid-template-columns: minmax(0, 1fr); }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery .shot { flex-basis: calc((100% - 18px) / 2); }
   .beyond-fig { max-width: 420px; }
 }
 @media (max-width: 760px) {
@@ -602,7 +603,7 @@ html.dev .dev-banner {
   .brand-name { display: none; }
 }
 @media (max-width: 560px) {
-  .gallery { grid-template-columns: minmax(0, 1fr); }
+  .gallery .shot { flex-basis: 100%; }
   .lead { grid-template-columns: 52px minmax(0, 1fr); padding: 18px; }
   .lead-logo { width: 52px; height: 52px; }
 }
