@@ -6,7 +6,8 @@ A static academic website with no build step and no dependencies. It works on an
 index.html                     all page content
 assets/css/style.css           design: colors and fonts are defined at the top
 assets/js/main.js              theme toggle, nav highlighting, BibTeX copy, Pareto animation
-assets/img/                    headshot, Golden Gate photo, research figures (metadata stripped)
+assets/img/                    headshot, gallery photos, research figures (metadata stripped)
+assets/img/logos/              logos for the Leadership section
 assets/Avijit_Saha_Asru_CV.pdf the CV visitors download (includes your phone number)
 .nojekyll                      tells GitHub Pages to serve the files as they are
 ```
@@ -24,7 +25,7 @@ On the live site they are hidden automatically until you fill them in.
 
 ## Fill in the placeholders
 
-1. **Profile links** (Contact section, near the end of `index.html`): Google Scholar, ORCID and GitHub.
+1. **Profile links** (Contact section, near the end of `index.html`): Google Scholar and ORCID.
    Paste your URL into `href="#"` and remove the word `todo` from that line's `class`.
    To drop a link entirely, delete its line.
 2. **Under-review paper** (Publications → U1): add the co-authors and the journal, then delete the
@@ -36,7 +37,10 @@ On the live site they are hidden automatically until you fill them in.
 - **New paper:** copy an existing `<li class="pub">…</li>` block and edit it. Keys follow the pattern
   J = journal, U = under review, P = presentation, T = thesis.
 - **New CV:** replace `assets/Avijit_Saha_Asru_CV.pdf` with a file of the same name.
-- **Colors:** edit the `--accent` (USF green) and `--gold-fill` values at the top of `style.css`.
+- **Gallery photo:** copy a `<figure class="shot">…</figure>` block in the Gallery section, point it to
+  a new image in `assets/img/` and edit the caption. Portrait photos (3:4) fit best.
+- **Colors:** edit `--deep`, `--green`, `--gold` and `--red` at the top of `style.css`. Each color
+  appears again further down for dark mode, so change both places.
 
 ## Publish for free with GitHub Pages
 
@@ -52,7 +56,7 @@ The steps below are for setting it up from scratch.
 3. Open **Settings → Pages**. Under *Build and deployment*, choose *Deploy from a branch*, then `main` and `/ (root)`.
 4. After a minute or two the site is live at `https://USERNAME.github.io`.
 5. Optional: in `index.html`, change the `og:image` value to the full URL
-   (`https://USERNAME.github.io/assets/img/avijit-saha-asru.jpg`) so link previews show your photo.
+   (`https://USERNAME.github.io/assets/img/headshot-studio.jpg`) so link previews show your photo.
 
 If you prefer the command line:
 
