@@ -67,16 +67,16 @@ git push -u origin main
 
 Other free hosts work too, such as Netlify Drop (drag this folder onto the page) or Cloudflare Pages.
 
-## Use your own domain (avijitsaha.com)
+## Use your own domain
 
-Your CV lists `avijitsaha.com`. On 5 Nov 2026 that domain had a DNS record but served no page.
-To point it at GitHub Pages:
+The site works at `avijitcoding.github.io` without one. To use a domain you own instead
+(written `example.com` below), do these steps in order:
 
-1. In the repository, open **Settings → Pages → Custom domain**, enter `avijitsaha.com` and save.
-   GitHub adds a `CNAME` file to the repository.
-2. At your domain registrar, add four `A` records for `@` pointing to
-   `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`,
-   plus a `CNAME` record for `www` pointing to `USERNAME.github.io`.
-   Remove any old `A` records for `@` first.
+1. At the company you bought the domain from, open its DNS settings. Add four `A` records
+   with the host left blank (or `@`) pointing to `185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153` and `185.199.111.153`, plus a `CNAME` record for `www` pointing to
+   `avijitcoding.github.io`. Remove any older `A` records first.
+2. Once those records work, open **Settings → Pages → Custom domain** in the repository,
+   enter `example.com` and save. GitHub adds a `CNAME` file to the repository.
 3. When the domain shows as verified, tick **Enforce HTTPS**.
-4. In `index.html`, change the `og:image` and `og:url` values to start with `https://avijitsaha.com/`.
+4. In `index.html`, change the `og:image` and `og:url` values to start with `https://example.com/`.
