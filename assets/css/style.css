@@ -511,6 +511,9 @@ dl, dd { margin: 0; }
 .shot { position: relative; margin: 0; overflow: hidden; border-radius: 18px; background: var(--deep-2); }
 .shot img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.5s ease; }
 .shot:hover img { transform: scale(1.03); }
+.shot a { display: block; }
+.gallery .shot.shot--wide { flex-basis: 100%; }
+.shot.shot--wide img { aspect-ratio: auto; height: auto; }
 .shot figcaption {
   position: absolute; inset: auto 0 0 0; padding: 48px 18px 16px;
   background: linear-gradient(to top, var(--scrim), transparent);
